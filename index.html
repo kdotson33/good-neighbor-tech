@@ -1,335 +1,385 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Good Neighbor Tech LLC | Tampa Bay Tech Support</title>
-  <meta name="description" content="Friendly, patient, and professional technology help throughout the Tampa Bay area. Computer repair, Wi-Fi setup, malware removal, data backup, and everyday tech assistance.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Neighbor Tech | Patient, Local Tech Support in Tampa Bay</title>
+    <meta name="description" content="Friendly, practical technology assistance for homes and small businesses in Tampa Bay. Computer repair, Wi-Fi setup, malware removal, and everyday tech help without the jargon.">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Good Neighbor Tech | Patient, Local Tech Support in Tampa Bay">
+    <meta property="og:description" content="Friendly, practical technology assistance for homes and small businesses in Tampa Bay. Computer repair, Wi-Fi setup, malware removal, and everyday tech help without the jargon.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://good-neighbor-tech.onrender.com/">
+    <meta property="og:site_name" content="Good Neighbor Tech">
 
-  <!-- Open Graph / Social Media -->
-  <meta property="og:title" content="Good Neighbor Tech LLC | Tampa Bay Tech Support">
-  <meta property="og:description" content="Friendly, patient, and professional technology help throughout the Tampa Bay area.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://good-neighbor-tech.onrender.com/">
-
-  <!-- Structured Data (JSON-LD) for Google Search -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Good Neighbor Tech LLC",
-    "description": "Friendly, patient, and professional technology support in the Tampa Bay area.",
-    "telephone": "813-606-2005",
-    "email": "goodneighbortechnology@gmail.com",
-    "areaServed": "Tampa Bay Area, FL",
-    "priceRange": "$$"
-  }
-  </script>
-
-  <style>
-    :root {
-      --bg: #0f172a;
-      --card-bg: #1e293b;
-      --accent: #38bdf8;
-      --accent-hover: #0284c7;
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
-      --border: #334155;
+    <!-- Schema.org Markup for Local Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Good Neighbor Tech",
+      "image": "https://goodneighbortech.netlify.app/logo.png",
+      "@id": "https://goodneighbortech.netlify.app",
+      "url": "https://goodneighbortech.netlify.app",
+      "telephone": "(813) 606-2005",
+      "email": "goodneighbortechnology@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tampa",
+        "addressRegion": "FL",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 27.9506,
+        "longitude": -82.4572
+      },
+      "areaServed": [
+        "Tampa",
+        "St. Petersburg",
+        "Clearwater",
+        "Brandon",
+        "Riverview",
+        "Tampa Bay Area"
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      "sameAs": []
     }
+    </script>
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    }
-
-    body {
-      background-color: var(--bg);
-      color: var(--text-main);
-      line-height: 1.6;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.5rem 2rem;
-      border-bottom: 1px solid var(--border);
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .logo {
-      font-weight: 700;
-      font-size: 1.25rem;
-      color: var(--text-main);
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 1.5rem;
-      align-items: center;
-    }
-
-    .nav-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover {
-      color: var(--text-main);
-    }
-
-    .btn {
-      background-color: var(--accent);
-      color: var(--bg);
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background-color 0.2s;
-      border: none;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.25rem;
-    }
-
-    .btn:hover {
-      background-color: var(--accent-hover);
-    }
-
-    .hero {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      line-height: 1.2;
-    }
-
-    .hero p {
-      font-size: 1.25rem;
-      color: var(--text-muted);
-      max-width: 700px;
-      margin: 0 auto 2rem auto;
-    }
-
-    .hero-btns {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-    }
-
-    .section {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 4rem 2rem;
-    }
-
-    .section-title {
-      font-size: 2rem;
-      margin-bottom: 2rem;
-      text-align: center;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .card {
-      background-color: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1.5rem;
-    }
-
-    .card h3 {
-      font-size: 1.25rem;
-      margin-bottom: 0.5rem;
-      color: var(--accent);
-    }
-
-    .card p {
-      color: var(--text-muted);
-    }
-
-    .contact-container {
-      background-color: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 2.5rem;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .form-group {
-      margin-bottom: 1.25rem;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 0.5rem;
-      color: var(--text-main);
-    }
-
-    .form-group input,
-    .form-group textarea {
-      width: 100%;
-      padding: 0.75rem;
-      background-color: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      color: var(--text-main);
-      font-size: 1rem;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: var(--accent);
-    }
-
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 2rem;
-      text-align: center;
-      color: var(--text-muted);
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2rem; }
-      .nav-links { display: none; }
-    }
-  </style>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        },
+                        slate: {
+                            850: '#152033',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at top right, rgba(34, 197, 94, 0.15), transparent 40%),
+                        radial-gradient(circle at bottom left, rgba(15, 23, 42, 1), #0f172a);
+        }
+    </style>
 </head>
-<body>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white">
 
-  <nav>
-    <a href="#" class="logo">Good Neighbor Tech LLC</a>
-    <div class="nav-links">
-      <a href="#services">Services</a>
-      <a href="#how-it-works">How It Works</a>
-      <a href="#about">About</a>
-      <a href="#contact" class="btn">Get Tech Help &#8599;</a>
-    </div>
-  </nav>
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-panel">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-brand-500/10 border border-brand-500/30 flex items-center justify-center text-brand-500 group-hover:bg-brand-500 group-hover:text-slate-900 transition-all duration-300">
+                    <i class="fa-solid fa-[#15803d] text-lg"></i>
+                    <span class="font-bold text-xl tracking-tight text-white">Good<span class="text-brand-500">Neighbor</span></span>
+                </div>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#services" class="text-sm font-medium text-slate-300 hover:text-brand-500 transition-colors">Services</a>
+                <a href="#how-it-works" class="text-sm font-medium text-slate-300 hover:text-brand-500 transition-colors">How It Works</a>
+                <a href="#about" class="text-sm font-medium text-slate-300 hover:text-brand-500 transition-colors">About</a>
+                <a href="#contact" class="px-5 py-2.5 rounded-lg bg-brand-600 hover:bg-brand-500 text-white font-medium text-sm transition-all shadow-lg shadow-brand-600/20 hover:shadow-brand-500/30">Get Tech Help <i class="fa-solid fa-arrow-right ml-1 text-xs"></i></a>
+            </nav>
 
-  <header class="hero">
-    <h1>Friendly, Patient Tech Support for Tampa Bay</h1>
-    <p>We solve your computer, Wi-Fi, and smart device headaches—no jargon, no stress.</p>
-    <div class="hero-btns">
-      <a href="#contact" class="btn">Get Tech Help</a>
-      <a href="tel:8136062005" style="color: var(--accent); text-decoration: none; align-self: center; font-weight: 600; padding: 0.5rem 1rem;">Call (813) 606-2005</a>
-    </div>
-  </header>
-
-  <section id="services" class="section">
-    <h2 class="section-title">Services</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Computer & Laptop Assistance</h3>
-        <p>Troubleshooting, setup, slow computer tune-ups, and regular software updates.</p>
-      </div>
-      <div class="card">
-        <h3>Wi-Fi & Home Network Setup</h3>
-        <p>Connecting routers, wireless printers, smart home accessories, and all your personal devices.</p>
-      </div>
-      <div class="card">
-        <h3>Virus & Malware Removal</h3>
-        <p>Device security checks, cleaning unwanted pop-ups or software, and safety recommendations.</p>
-      </div>
-      <div class="card">
-        <h3>Everyday Tech Help</h3>
-        <p>Help with smartphones, tablets, email accounts, app installs, and everyday questions.</p>
-      </div>
-      <div class="card">
-        <h3>Data Backup & Recovery</h3>
-        <p>Setting up cloud backups or external hard drives to keep your precious photos and files safe.</p>
-      </div>
-      <div class="card">
-        <h3>Community Access</h3>
-        <p>Guidance on refurbished devices and expanding local access to reliable tech tools.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="how-it-works" class="section">
-    <h2 class="section-title">How It Works</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>1. Reach Out</h3>
-        <p>Call, email, or send us a message below describing the issue you are experiencing.</p>
-      </div>
-      <div class="card">
-        <h3>2. Schedule</h3>
-        <p>We will arrange a quick diagnostic check or schedule a time to assist you directly.</p>
-      </div>
-      <div class="card">
-        <h3>3. Get Resolved</h3>
-        <p>We work step-by-step to fix the issue and explain how to prevent it in the future.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="about" class="section">
-    <h2 class="section-title">About Good Neighbor Tech</h2>
-    <div class="card" style="max-width: 800px; margin: 0 auto; text-align: center;">
-      <p>Serving the Tampa Bay area, Good Neighbor Tech LLC provides clear, friendly, and reliable technology assistance. Whether you need help setting up a new device, securing your computer, or organizing your digital life, we are here to help like a good neighbor.</p>
-    </div>
-  </section>
-
-  <section id="contact" class="section">
-    <h2 class="section-title">Get Tech Help</h2>
-    <div class="contact-container">
-      
-      <!-- Web3Forms Form Integration -->
-      <form action="https://api.web3forms.com/submit" method="POST">
-        <!-- Replace YOUR_ACCESS_KEY_HERE with your Web3Forms access key -->
-        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-        <input type="hidden" name="subject" value="New Inquiry - Good Neighbor Tech LLC">
-
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required placeholder="Your full name">
+            <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white p-2">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
         </div>
-
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-800 bg-slate-900/95 px-4 pt-4 pb-6 space-y-3">
+            <a href="#services" class="block py-2 text-slate-300 hover:text-brand-500">Services</a>
+            <a href="#how-it-works" class="block py-2 text-slate-300 hover:text-brand-500">How It Works</a>
+            <a href="#about" class="block py-2 text-slate-300 hover:text-brand-500">About</a>
+            <a href="#contact" class="block w-full text-center mt-4 px-5 py-2.5 rounded-lg bg-brand-600 text-white font-medium text-sm">Get Tech Help</a>
         </div>
+    </header>
 
-        <div class="form-group">
-          <label for="phone">Phone (Optional)</label>
-          <input type="tel" id="phone" name="phone" placeholder="(813) 555-0199">
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 hero-gradient overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-500 text-xs font-semibold uppercase tracking-wider mb-6">
+                    <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+                    Serving the Greater Tampa Bay Area
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6">
+                    Technology help that feels like asking a <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-emerald-400">knowledgeable neighbor.</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-slate-300 font-normal leading-relaxed mb-8 max-w-2xl">
+                    Patient, friendly tech assistance for seniors, families, and small businesses. No tech jargon, no hidden fees, just clear solutions.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
+                    <a href="#contact" class="px-8 py-4 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-base transition-all shadow-xl shadow-brand-600/25 text-center">
+                        Request Assistance
+                    </a>
+                    <a href="tel:8136062005" class="px-8 py-4 rounded-xl glass-panel hover:bg-slate-800 text-slate-200 font-semibold text-base transition-all flex items-center justify-center gap-3">
+                        <i class="fa-solid fa-phone text-brand-500"></i>
+                        (813) 606-2005
+                    </a>
+                </div>
+
+                <!-- Trust signals -->
+                <div class="mt-12 pt-8 border-t border-slate-800/80 grid grid-cols-2 sm:grid-cols-3 gap-6 text-slate-400 text-xs font-medium">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-brand-500 text-sm"></i> In-Home & Remote Support
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-brand-500 text-sm"></i> Senior-Friendly & Patient
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-brand-500 text-sm"></i> Transparent Hourly Rates
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="form-group">
-          <label for="message">How can we help?</label>
-          <textarea id="message" name="message" rows="5" required placeholder="Tell us what's going on..."></textarea>
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-slate-900/50 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">How We Can Help You</h2>
+                <p class="text-slate-400">Whether your device is running slow, Wi-Fi won't reach the back room, or you just need help setting up a new computer, we've got you covered.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="glass-panel p-8 rounded-2xl hover:border-brand-500/40 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-500 mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-laptop text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Computer Repairs & Tune-ups</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Fix slow boot times, remove viruses/malware, update operating systems, and replace failing hard drives or batteries.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="glass-panel p-8 rounded-2xl hover:border-brand-500/40 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-500 mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-wifi text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Wi-Fi & Home Networking</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Eliminate dead zones with mesh Wi-Fi setups, connect smart TVs, printers, and secure your wireless network.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="glass-panel p-8 rounded-2xl hover:border-brand-500/40 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-500 mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-mobile-screen-button text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">New Device Setup & Transfer</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Got a new phone, iPad, or laptop? We'll safely transfer your photos, emails, contacts, and passwords seamlessly.</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="glass-panel p-8 rounded-2xl hover:border-brand-500/40 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-500 mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-shield-halved text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Security & Scam Protection</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Install reliable anti-virus protection, set up password managers, and learn how to identify phishing emails and phone scams.</p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="glass-panel p-8 rounded-2xl hover:border-brand-500/40 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-500 mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-chalkboard-user text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">1-on-1 Patient Tech Tutoring</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Learn how to use Zoom, manage email attachments, organize digital family photos, or navigate social media at your own pace.</p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="glass-panel p-8 rounded-2xl hover:border-brand-500/40 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-500 mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-database text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Backup & Data Recovery</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Protect your irreplaceable photos and documents with automated cloud or local backups before a drive crashes.</p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <button type="submit" class="btn" style="width: 100%; justify-content: center; padding: 0.85rem; font-size: 1rem;">Send Message</button>
-      </form>
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-20 border-y border-slate-800 bg-slate-950">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">Simple, Stress-Free Process</h2>
+                <p class="text-slate-400">Getting help should never be complicated.</p>
+            </div>
 
-    </div>
-  </section>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-slate-800 border border-slate-700 flex items-center justify-center text-brand-500 text-2xl font-bold mx-auto mb-6">1</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Tell Us What's Wrong</h3>
+                    <p class="text-slate-400 text-sm">Call or send us a message describing the issue in plain words.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-slate-800 border border-slate-700 flex items-center justify-center text-brand-500 text-2xl font-bold mx-auto mb-6">2</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Schedule a Time</h3>
+                    <p class="text-slate-400 text-sm">We'll set up a remote session or schedule a quick in-person visit.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-slate-800 border border-slate-700 flex items-center justify-center text-brand-500 text-2xl font-bold mx-auto mb-6">3</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Problem Solved</h3>
+                    <p class="text-slate-400 text-sm">We fix the issue and show you how to keep things running smoothly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    <p>&copy; 2026 Good Neighbor Tech LLC | Tampa Bay Tech Support | Call 813-606-2005</p>
-  </footer>
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-panel p-8 md:p-12 rounded-3xl border border-slate-800">
+                <div class="max-w-3xl">
+                    <h2 class="text-3xl font-bold text-white mb-6">About Good Neighbor Tech</h2>
+                    <p class="text-slate-300 leading-relaxed mb-6">
+                        Good Neighbor Tech was built on a simple premise: technology should make your life easier, not more frustrating. Too often, big repair chains charge exorbitant fees, talk down to customers, or recommend buying new equipment when a quick fix is all that's needed.
+                    </p>
+                    <p class="text-slate-300 leading-relaxed mb-8">
+                        We provide local, honest, and patient technical support throughout Tampa, St. Petersburg, and Clearwater. Whether you're a retiree needing help with your tablet or a small home office needing reliable Wi-Fi, we're here to help.
+                    </p>
+                    <div class="flex items-center gap-4 text-sm text-slate-400">
+                        <span class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-brand-500"></i> Local to Tampa Bay</span>
+                        <span class="flex items-center gap-2"><i class="fa-solid fa-heart text-brand-500"></i> Patient & Friendly</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-slate-950">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <div>
+                    <h2 class="text-3xl font-bold text-white mb-4">Let's Fix Your Tech Problems Today</h2>
+                    <p class="text-slate-400 mb-8">Fill out the brief form or call us directly. We respond to all inquiries within a few hours!</p>
+                    
+                    <div class="space-y-6">
+                        <a href="tel:8136062005" class="flex items-center gap-4 p-4 rounded-xl glass-panel hover:bg-slate-800 transition-colors">
+                            <div class="w-12 h-12 rounded-lg bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-500 text-lg">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-400 font-medium">Call or Text Anytime</div>
+                                <div class="text-lg font-bold text-white">(813) 606-2005</div>
+                            </div>
+                        </a>
+
+                        <a href="mailto:goodneighbortechnology@gmail.com" class="flex items-center gap-4 p-4 rounded-xl glass-panel hover:bg-slate-800 transition-colors">
+                            <div class="w-12 h-12 rounded-lg bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-500 text-lg">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-400 font-medium">Email Us Directly</div>
+                                <div class="text-lg font-bold text-white">goodneighbortechnology@gmail.com</div>
+                            </div>
+                        </a>
+
+                        <div class="flex items-center gap-4 p-4 rounded-xl glass-panel">
+                            <div class="w-12 h-12 rounded-lg bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-500 text-lg">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-400 font-medium">Hours of Operation</div>
+                                <div class="text-sm font-semibold text-white">Monday – Saturday: 8:00 AM – 6:00 PM</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form (Web3Forms Integrated) -->
+                <div class="glass-panel p-8 rounded-2xl border border-slate-800">
+                    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+                        <!-- REQUIRED Web3Forms Access Key -->
+                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                        <input type="hidden" name="subject" value="New Inquiry - Good Neighbor Tech">
+
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-slate-300 mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors" placeholder="John Doe">
+                        </div>
+
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-slate-300 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors" placeholder="(813) 555-0123">
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors" placeholder="john@example.com">
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-slate-300 mb-2">How can we help you?</label>
+                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors" placeholder="Please describe what issue you are having..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-base transition-all shadow-lg shadow-brand-600/25 cursor-pointer">
+                            Send Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-slate-800 text-center text-slate-500 text-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div>&copy; 2026 Good Neighbor Tech. All rights reserved.</div>
+            <div class="flex gap-6 text-slate-400">
+                <span>Serving Tampa, St. Pete, Clearwater & surrounding areas</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
